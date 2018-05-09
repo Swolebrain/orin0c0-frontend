@@ -6,8 +6,18 @@ For an overview of the project structure please refer to the [Gatsby documentati
 
 ## Color Palette
 
-background: #111111
-yellow: #FFE61E
+background: #141414  
+secondary BG: #333  
+main highlight: #02b7ff  
+primary text: white  
+disabled text: #7F7F7F    
+other highlights:   
+yellow: #FFE61E  
+cyan: ##00F6EA  
+pink: #FB104F  
+
+Example of this palette in action in the mockups folder.
+
 
 ## Install
 
