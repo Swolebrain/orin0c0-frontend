@@ -1,7 +1,13 @@
-# gatsby-starter-default
-The default Gatsby starter.
+# Project Orin0c0 front end
+
+This proejct was made with the default Gatsby starter.
 
 For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
+
+## Color Palette
+
+background: #111111
+yellow: #FFE61E
 
 ## Install
 
