@@ -627,3 +627,15 @@ pre tt:after {
 .jumbotron {
   background-color: transparent !important;
 }
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.navbar-brand {
+  font-family: 'Bungee Inline', cursive;
+}
+
+.h2 {
+  font-family: 'Audiowide', cursive;
+}
