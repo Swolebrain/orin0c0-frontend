@@ -1,12 +1,14 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import TestDynamicComponent from '../components/TestDynamicComponent';
+import TestDynamicComponent from '../components/TestDynamicComponent'
+import Navbar from '../components/Navbar'
+import MarketplaceShowcase from '../components/MarketplaceShowcase'
 
 const ListingsPage = () => (
-    <div>
-        <h1>Listings Page x</h1>
-        <TestDynamicComponent/>
-    </div>
+  <div>
+    <Navbar />
+    <MarketplaceShowcase />
+  </div>
 )
 
 export default ListingsPage

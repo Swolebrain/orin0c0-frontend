@@ -6,7 +6,7 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark fixed-top mb-5">
         <div className="container">
-          <Link className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             orin0c0
           </Link>
           <button

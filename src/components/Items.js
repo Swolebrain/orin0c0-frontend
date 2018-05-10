@@ -10,7 +10,11 @@ class Items extends Component {
             <h3 className="title text-center">Top Cryptocurrency Chart</h3>
 
             <nav>
-              <div className="nav nav-tabs" id="nav-tab" role="tablist">
+              <div
+                className="nav nav-tabs nav-fill"
+                id="nav-tab"
+                role="tablist"
+              >
                 <a
                   className="nav-item nav-link"
                   id="nav-bitcoin-tab"
@@ -48,20 +52,28 @@ class Items extends Component {
             </nav>
             <div className="tab-content" id="nav-tabContent">
               <div
-                className="tab-pane fade show"
+                className="tab-pane fade"
                 id="nav-bitcoin"
                 role="tabpanel"
                 aria-labelledby="nav-bitcoin-tab"
               >
-                Bitcoin Info goes here
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
+                doloremque quia nulla provident ducimus sit sequi aut ipsa fugit
+                porro expedita quisquam rerum architecto, laborum, voluptatem,
+                ipsam eum cumque veniam. Quos cum itaque nulla officia ut
+                laudantium hic repellat ducimus!
               </div>
               <div
-                className="tab-pane fade active"
+                className="tab-pane fade show active"
                 id="nav-ethereum"
                 role="tabpanel"
                 aria-labelledby="nav-ethereum-tab"
               >
-                Ethereum Info goes here
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+                quis est assumenda quia pariatur voluptatem quisquam fugiat,
+                iure ea rem animi debitis quaerat reprehenderit repellat, sequi
+                dignissimos ut beatae atque adipisci ab blanditiis. Facere ipsam
+                necessitatibus aliquid assumenda nostrum nemo.
               </div>
               <div
                 className="tab-pane fade"
@@ -69,7 +81,11 @@ class Items extends Component {
                 role="tabpanel"
                 aria-labelledby="nav-litecoin-tab"
               >
-                Litecoin Info goes here
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. A
+                ipsam, fugit obcaecati pariatur hic animi magnam sapiente, odit
+                laboriosam nam nesciunt nostrum at corrupti aspernatur! Nobis
+                enim explicabo accusantium aliquam. Quaerat culpa est quam
+                itaque! Vero iusto excepturi cum molestias?
               </div>
             </div>
           </div>

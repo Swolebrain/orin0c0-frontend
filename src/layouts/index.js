@@ -3,9 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header'
-import Navbar from '../components/Navbar'
-import Showcase from '../components/Showcase'
-import Items from '../components/Items'
+
 import './index.css'
 
 const Layout = ({ children, data }) => (
@@ -17,9 +15,7 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Navbar />
-    <Showcase />
-    <Items />
+
     <div
       style={{
         margin: '0 auto',
