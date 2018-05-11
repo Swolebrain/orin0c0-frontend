@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header'
+import Navbar from '../components/Navbar/Navbar'
 
 import './index.css'
 
@@ -15,7 +16,7 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-
+    <Navbar />
     <div
       style={{
         margin: '0 auto',

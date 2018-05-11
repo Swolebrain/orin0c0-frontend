@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
 
+import NavbarItem from './NavbarItem'
+
 class Navbar extends Component {
   render() {
     return (
@@ -20,34 +22,14 @@ class Navbar extends Component {
 
           <div className="collapse navbar-collapse" id="mobile-nav">
             <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to="/listings/">
-                  Marketplace
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/articles/">
-                  Articles
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/podcasts/">
-                  Podcasts
-                </Link>
-              </li>
+              <NavbarItem to="/listings/" name="Marketplace" />
+              <NavbarItem to="/articles/" name="Articles" />
+              <NavbarItem to="/podcasts/" name="Podcast" />
             </ul>
 
             <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Register
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Sign In
-                </a>
-              </li>
+              <NavbarItem to="#" name="Register" />
+              <NavbarItem to="#" name="Sign In" />
             </ul>
           </div>
         </div>
