@@ -637,5 +637,22 @@ body {
 }
 
 .h2 {
-  font-family: 'Audiowide', cursive;
+  /* font-family: 'Audiowide', cursive; */
+  font-family: 'Black Ops One', cursive;
+}
+
+.product-avatar img {
+  width: 7rem;
+}
+.product-avatar img,
+.product-avatar h3 {
+  position: relative;
+  top: 5rem;
+}
+
+.product-container h2 {
+  font-size: 5rem;
+  position: relative;
+  right: 4rem;
+  /* bottom: 1rem; */
 }
