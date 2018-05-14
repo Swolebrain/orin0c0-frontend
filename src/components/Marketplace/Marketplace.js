@@ -4,37 +4,51 @@ import Link from 'gatsby-link'
 export default class componentName extends Component {
   render() {
     return (
-      <div className="container d-flex">
-        <div className="col-3 text-center">
-          <img
-            className="rounded-circle"
-            src="https://api.adorable.io/avatars/200/.png"
-            alt="Avatar Placeholder"
-          />
-          <h3>User1234</h3>
-        </div>
-        <div className="col-5">
-          <h2>RND</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-            ea quis est, velit repellendus id facere molestias impedit numquam
-            fugit.
-          </p>
-          <button className="btn btn-sm btn-secondary">more</button>
-        </div>
-        <div className="col-2">
-          <img src="https://picsum.photos/100/60" alt="Placeholder Image" />
-          <img src="https://picsum.photos/100/50" alt="Placeholder Image" />
-          <img src="https://picsum.photos/100/61" alt="Placeholder Image" />
+      <div className="container d-flex mb-3">
+        <div className="col-10 d-flex border p-3">
+          <div className="col-3 text-center border-right pl-0">
+            <img
+              className="rounded-circle"
+              src="http://www.designskilz.com/random-users/images/imageM37.jpg"
+              alt="Avatar Placeholder"
+            />
+            <h3>User1234</h3>
+          </div>
+          <div className="col-7 border-right">
+            <h2>RND</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+              ea quis est, velit repellendus id facere molestias impedit numquam
+              fugit.
+            </p>
+            <button className="btn btn-sm btn-secondary">more</button>
+          </div>
+          <div className="col-2 pr-0 m-auto">
+            <img
+              src="https://picsum.photos/100/65"
+              alt="Placeholder Image"
+              className="mb-2"
+            />
+            <img
+              src="https://picsum.photos/100/65"
+              alt="Placeholder Image"
+              className="mb-2"
+            />
+            <img
+              src="https://picsum.photos/100/65"
+              alt="Placeholder Image"
+              className="mb-2"
+            />
+          </div>
         </div>
         <div className="col-2">
           <div className="mb-3">
-            <a href="#" className="btn btn-danger btn-block">
+            <a href="#" className="btn btn-danger btn-block btn-sm">
               Hide
             </a>
           </div>
           <div>
-            <a href="#" className="btn btn-success btn-block">
+            <a href="#" className="btn btn-success btn-block btn-sm">
               Pin
             </a>
           </div>

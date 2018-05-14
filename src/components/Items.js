@@ -34,8 +34,8 @@ class Items extends Component {
               data-statsticker="false"
             />
             <div
-              className="coinmarketcap-currency-widget mb-3"
-              data-currencyid="2"
+              className="coinmarketcap-currency-widget"
+              data-currencyid="52"
               data-base="USD"
               data-secondary=""
               data-ticker="true"
