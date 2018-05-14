@@ -56,24 +56,25 @@ class Items extends Component {
                 id="nav-bitcoin"
                 role="tabpanel"
                 aria-labelledby="nav-bitcoin-tab"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
-                doloremque quia nulla provident ducimus sit sequi aut ipsa fugit
-                porro expedita quisquam rerum architecto, laborum, voluptatem,
-                ipsam eum cumque veniam. Quos cum itaque nulla officia ut
-                laudantium hic repellat ducimus!
-              </div>
+              />
               <div
                 className="tab-pane fade show active"
                 id="nav-ethereum"
                 role="tabpanel"
                 aria-labelledby="nav-ethereum-tab"
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                quis est assumenda quia pariatur voluptatem quisquam fugiat,
-                iure ea rem animi debitis quaerat reprehenderit repellat, sequi
-                dignissimos ut beatae atque adipisci ab blanditiis. Facere ipsam
-                necessitatibus aliquid assumenda nostrum nemo.
+                <div
+                  className="coinmarketcap-currency-widget"
+                  data-currencyid="1"
+                  data-base="USD"
+                  data-secondary=""
+                  data-ticker="true"
+                  data-rank="true"
+                  data-marketcap="true"
+                  data-volume="true"
+                  data-stats="USD"
+                  data-statsticker="false"
+                />
               </div>
               <div
                 className="tab-pane fade"

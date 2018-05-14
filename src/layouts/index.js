@@ -5,6 +5,8 @@ import Helmet from 'react-helmet'
 import Header from '../components/header'
 import Navbar from '../components/Navbar/Navbar'
 
+import './fonts.css'
+import '../css/bootstrap.min.css'
 import './index.css'
 
 const Layout = ({ children, data }) => (
@@ -15,7 +17,12 @@ const Layout = ({ children, data }) => (
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
-    />
+    >
+      <script
+        type="text/javascript"
+        src="https://files.coinmarketcap.com/static/widget/currency.js"
+      />
+    </Helmet>
     <Navbar />
     <div
       style={{
