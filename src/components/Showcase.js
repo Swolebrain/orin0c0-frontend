@@ -8,9 +8,8 @@ const Showcase = () => {
           Buy and Sell Crypto related items, <br />
           and learn a thing or two about digital currencies
         </p>
-        <p className="lead">How it works:</p>
-
         <hr className="my-4" />
+        <p className="lead">How it works:</p>
 
         <div className="card-deck">
           <div className="card">
