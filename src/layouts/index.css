@@ -663,3 +663,8 @@ body {
 .item-container {
   height: 305px;
 }
+
+.product-image {
+  height: 70px;
+  width: 100px;
+}

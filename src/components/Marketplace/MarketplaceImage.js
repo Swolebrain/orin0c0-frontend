@@ -8,7 +8,7 @@ export default class MarketplaceImage extends Component {
     const { src } = this.props
     return (
       <div>
-        <img src={src} className="mb-2" />
+        <img src={src} className="mb-2 product-image" />
       </div>
     )
   }

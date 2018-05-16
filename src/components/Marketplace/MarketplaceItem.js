@@ -8,7 +8,9 @@ export default class MarketplaceItem extends Component {
   }
 
   render() {
-    const { subject, body } = this.props
+    const { subject, body, images } = this.props
+    let imagesArray = images.split(',')
+
     return (
       <div className="container d-flex mb-3 item-container">
         <div className="col-10 d-flex border p-3 main-product-container">
@@ -28,9 +30,9 @@ export default class MarketplaceItem extends Component {
             <button className="btn btn-sm btn-secondary">more</button>
           </div>
           <div className="col-2 pr-0 m-auto">
-            <MarketplaceImage src="https://picsum.photos/100/65" />
-            <MarketplaceImage src="https://picsum.photos/100/65" />
-            <MarketplaceImage src="https://picsum.photos/100/65" />
+            {imagesArray.map(image => (
+              <MarketplaceImage key={image} src={image} />
+            ))}
           </div>
         </div>
         <div className="col-2">

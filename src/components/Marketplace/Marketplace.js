@@ -34,11 +34,14 @@ export default class Marketplace extends Component {
       <div>
         {listings.map(listing => {
           const { subject, body, images } = listing
+          // console.log(images)
+
           return (
             <MarketplaceItem
               key={subject}
-              subject={subject.toUpperCase().substr(0, 3)}
-              body={body.substr(0, 100)}
+              subject={subject.toUpperCase().substr(0, 4)}
+              body={body.substr(0, 150)}
+              images={images}
             />
           )
         })}

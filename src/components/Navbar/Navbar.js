@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
 
-import NavbarItem from './NavbarItem'
+// import NavbarItem from './NavbarItem'
 
 class Navbar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark fixed-top mb-5">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
         <div className="container">
           <Link className="navbar-brand" to="/">
             orin0c0
@@ -22,14 +22,37 @@ class Navbar extends Component {
 
           <div className="collapse navbar-collapse" id="mobile-nav">
             <ul className="navbar-nav mr-auto">
-              <NavbarItem to="/listings/" name="Marketplace" />
-              <NavbarItem to="/articles/" name="Articles" />
-              <NavbarItem to="/podcasts/" name="Podcast" />
+              <li className="nav-item">
+                <Link className="nav-link" to="/listings/">
+                  {' '}
+                  Marketplace
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/articles/">
+                  {' '}
+                  Articles
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/podcasts/">
+                  {' '}
+                  Podcasts
+                </Link>
+              </li>
             </ul>
 
             <ul className="navbar-nav ml-auto">
-              <NavbarItem to="#" name="Register" />
-              <NavbarItem to="#" name="Sign In" />
+              <li className="nav-item">
+                <Link className="nav-link" to="/register/">
+                  Register
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/login/">
+                  Login
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

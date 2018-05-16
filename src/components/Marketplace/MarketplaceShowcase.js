@@ -8,7 +8,7 @@ export default class MarketplaceShowcase extends Component {
   render() {
     return (
       <div className="container">
-        <div className="jumbotron mt-5 pl-0 pr-0">
+        <div className="jumbotron pl-0 pr-0">
           <p className="h2 mb-4">Marketplace</p>
           {/* Nav items */}
           <nav>
