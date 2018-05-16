@@ -656,3 +656,10 @@ body {
   right: 4rem;
   /* bottom: 1rem; */
 }
+.main-product-container {
+  box-shadow: 12px 12px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.item-container {
+  height: 305px;
+}
