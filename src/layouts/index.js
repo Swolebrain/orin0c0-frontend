@@ -5,14 +5,12 @@ import { Provider } from 'react-redux'
 
 import Header from '../components/header'
 import Navbar from '../components/Navbar/Navbar'
-import store from '../store'
 
 import './fonts.css'
 import '../css/bootstrap.min.css'
 import './index.css'
 
 const Layout = ({ children, data }) => (
-  <Provider store={store}>
     <div>
       <Helmet
         title={data.site.siteMetadata.title}
@@ -38,7 +36,6 @@ const Layout = ({ children, data }) => (
         {children()}
       </div>
     </div>
-  </Provider>
 )
 
 Layout.propTypes = {
