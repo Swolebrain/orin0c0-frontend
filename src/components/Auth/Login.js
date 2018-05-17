@@ -44,7 +44,7 @@ export default class Login extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Register</h1>
+              <h1 className="display-4 text-center">Login</h1>
               <p className="lead text-center">Log in to your ocin0c0 account</p>
               <form noValidate onSubmit={this.onSubmit}>
                 <div className="form-group">

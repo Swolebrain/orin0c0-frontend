@@ -3,7 +3,7 @@ import React from 'react'
 const Showcase = () => {
   return (
     <div className="container">
-      <div className="jumbotron jumbotron-fluid">
+      <div className="jumbotron jumbotron-fluid pt-3">
         <p className="h2 mb-2">
           Buy and Sell Crypto related items, <br />
           and learn a thing or two about digital currencies
