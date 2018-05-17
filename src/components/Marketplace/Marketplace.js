@@ -40,7 +40,7 @@ export default class Marketplace extends Component {
             <MarketplaceItem
               key={subject}
               subject={subject.toUpperCase().substr(0, 4)}
-              body={body.substr(0, 150)}
+              body={body.substr(0, 150) + ' ...'}
               images={images}
             />
           )
