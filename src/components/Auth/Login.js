@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-export default class Login extends Component {
+class Login extends Component {
   constructor() {
     super()
     this.state = {
@@ -56,10 +56,6 @@ export default class Login extends Component {
                     value={this.state.email}
                     onChange={this.onChange}
                   />
-                  <small className="form-text text-muted">
-                    This site uses Gravatar so if you want a profile image, use
-                    a Gravatar email
-                  </small>
                 </div>
                 <div className="form-group">
                   <input
@@ -80,3 +76,5 @@ export default class Login extends Component {
     )
   }
 }
+
+export default Login
