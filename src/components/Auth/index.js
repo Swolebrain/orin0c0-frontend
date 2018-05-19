@@ -28,7 +28,7 @@ class Auth {
   handleAuthentication() {
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
-        console.log(authResult)
+        // console.log(authResult)
         this.setSession(authResult)
         return
       }
@@ -72,10 +72,8 @@ class Auth {
 
   getUser() {
     if (localStorage.getItem('user')) {
-      const user = JSON.parse(localStorage.getItem('user'))
+      return JSON.parse(localStorage.getItem('user'))
       // console.log(user)
-
-      return user
     }
   }
 }

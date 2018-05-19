@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import auth from '../Auth/index'
+import auth from '../Auth'
 
 class Profile extends Component {
   constructor(props) {
@@ -10,21 +10,20 @@ class Profile extends Component {
       user: {},
     }
   }
+
   componentDidMount() {
     this.fetchProfile()
   }
 
-  fetchProfile = () => {
-    if (auth.isAuthenticated()) {
-      const user = auth.getUser()
-
-      this.setState({ user })
-    }
+  fetchProfile() {
+    this.setState({
+      user: auth.getUser(),
+    })
   }
 
   render() {
-    const { user } = this.state
-    return <div className="container">{console.log(user)}</div>
+    // const { user } = this.state
+    return <div className="container">{/* {console.log(this.user)} */}</div>
   }
 }
 

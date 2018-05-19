@@ -84,7 +84,15 @@ class Navbar extends Component {
               )}
               {auth.isAuthenticated() && (
                 <li className="nav-item">
-                  <button onClick={this.logout}>Log out</button>
+                  <button onClick={this.logout}>
+                    {/* <img
+                      className="rounded-circle"
+                      src={user.picture}
+                      alt={user.nickname}
+                      style={{ width: '25px', marginRight: '5px' }}
+                    /> */}
+                    Log out
+                  </button>
                 </li>
               )}
             </ul>
