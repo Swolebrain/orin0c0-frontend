@@ -9,7 +9,6 @@ export default class MarketplaceItem extends Component {
 
   render() {
     const { subject, body, images } = this.props
-    let imagesArray = images.split(',')
 
     return (
       <div className="container d-flex mb-3 item-container">
@@ -30,9 +29,7 @@ export default class MarketplaceItem extends Component {
             <button className="btn btn-sm btn-secondary">more</button>
           </div>
           <div className="col-2 pr-0 m-auto">
-            {imagesArray.map(image => (
-              <MarketplaceImage key={image} src={image} />
-            ))}
+            {images.map(image => <MarketplaceImage key={image} src={image} />)}
           </div>
         </div>
         <div className="col-2">

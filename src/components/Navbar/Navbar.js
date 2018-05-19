@@ -1,9 +1,43 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
+import auth from '../Auth'
 
 // import NavbarItem from './NavbarItem'
 
 class Navbar extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      authenticated: false,
+    }
+
+    this.login = this.login.bind(this)
+    this.logout = this.logout.bind(this)
+  }
+
+  login() {
+    auth.login()
+
+    this.setState({
+      authenticated: auth.isAuthenticated(),
+    })
+  }
+
+  logout() {
+    auth.logout()
+
+    this.setState({
+      authenticated: auth.isAuthenticated(),
+    })
+  }
+
+  componentDidMount() {
+    this.setState({
+      authenticated: auth.isAuthenticated(),
+    })
+  }
+
   render() {
     return (
       <nav className="navbar fixed-top navbar-expand-sm navbar-light bg-light">
@@ -43,16 +77,16 @@ class Navbar extends Component {
             </ul>
 
             <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to="/register/">
-                  Register
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/login/">
-                  Login
-                </Link>
-              </li>
+              {!auth.isAuthenticated() && (
+                <li className="nav-item">
+                  <button onClick={this.login}>Log in</button>
+                </li>
+              )}
+              {auth.isAuthenticated() && (
+                <li className="nav-item">
+                  <button onClick={this.logout}>Log out</button>
+                </li>
+              )}
             </ul>
           </div>
         </div>

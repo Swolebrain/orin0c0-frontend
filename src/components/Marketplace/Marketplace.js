@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 import Link from 'gatsby-link'
 
 import MarketplaceItem from './MarketplaceItem'
@@ -11,20 +12,12 @@ export default class Marketplace extends Component {
   }
 
   fetchData = () => {
-    fetch('http://localhost:5000/api/listings')
-      .then(response => response.json())
-      .then(parsedJSON =>
-        parsedJSON.map(listing => ({
-          subject: `${listing.subject}`,
-          body: `${listing.body}`,
-          images: `${listing.images}`,
-        }))
-      )
-      .then(listings =>
-        this.setState({
-          listings,
-        })
-      )
+    axios
+      .get('http://localhost:5000/api/listings')
+      .then(res => {
+        const listings = res.data
+        this.setState({ listings })
+      })
       .catch(error => console.log(error))
   }
 
