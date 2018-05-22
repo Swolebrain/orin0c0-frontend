@@ -2,15 +2,6 @@ import auth0 from 'auth0-js'
 import {AUTH_CONFIG} from './auth0-variables'
 import {navigateTo} from 'gatsby-link'
 
-let ls;
-try{
-    ls = localStorage;
-}
-catch(err){
-    ls = null;
-    console.log(err);
-}
-const localStorage = ls;
 
 class Auth {
     auth0 = new auth0.WebAuth({
@@ -53,7 +44,7 @@ class Auth {
         let expiresAt = JSON.stringify(
             authResult.expiresIn * 1000 + new Date().getTime()
         )
-        if (!localStorage) return;
+        if (typeof window === 'undefined') return;
         localStorage.setItem('access_token', authResult.accessToken)
         localStorage.setItem('id_token', authResult.idToken)
         localStorage.setItem('expires_at', expiresAt)
@@ -64,7 +55,7 @@ class Auth {
 
     logout() {
         // Clear access token and ID token from local storage
-        if (!localStorage) return;
+        if (typeof window === 'undefined') return;
         localStorage.removeItem('access_token');
         localStorage.removeItem('id_token');
         localStorage.removeItem('expires_at');
@@ -75,7 +66,7 @@ class Auth {
     isAuthenticated() {
         // Check whether the current time is past the
         // access token's expiry time
-        if (!localStorage) return;
+        if (typeof window === 'undefined') return;
         let expiresAt = localStorage.getItem('expires_at');
         try {
             expiresAt = JSON.parse(expiresAt);
@@ -85,7 +76,7 @@ class Auth {
     }
 
     getUser() {
-        if (!localStorage) return;
+        if (typeof window === 'undefined') return;
         let user = localStorage.getItem('user');
         try{
             user = JSON.parse(user);
@@ -96,7 +87,7 @@ class Auth {
         return user;
     }
     getAccessToken() {
-        if (!localStorage) return;
+        if (typeof window === 'undefined') return;
         let access_token = localStorage.getItem('access_token');
         try{
             access_token = JSON.parse(access_token);
@@ -107,7 +98,7 @@ class Auth {
         return access_token;
     }
     getIdToken() {
-        if (!localStorage) return;
+        if (typeof window === 'undefined') return;
         let id_token = localStorage.getItem('id_token');
         try{
             id_token = JSON.parse(id_token);

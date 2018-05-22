@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="da46a294-3568-4261-ad13-d2d35aa1ee42" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-node.js" afterPath="$PROJECT_DIR$/../gatsby-node.js" />
       <change beforePath="$PROJECT_DIR$/../src/components/Auth/index.js" afterPath="$PROJECT_DIR$/../src/components/Auth/index.js" />
-      <change beforePath="$PROJECT_DIR$/../src/pages/create-profile.js" afterPath="$PROJECT_DIR$/../src/pages/create-profile.js" />
+      <change beforePath="$PROJECT_DIR$/../src/pages/articles.js" afterPath="$PROJECT_DIR$/../src/pages/articles.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,7 +42,7 @@
       <file leaf-file-name="callback.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../src/pages/callback.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
+            <state relative-caret-position="198">
               <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -52,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../src/components/Auth/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="94" column="9" lean-forward="false" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
+            <state relative-caret-position="33">
+              <caret line="46" column="50" lean-forward="false" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -64,10 +63,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create-profile.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="create-profile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../src/pages/create-profile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
+            <state relative-caret-position="726">
               <caret line="49" column="21" lean-forward="false" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
@@ -102,6 +101,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="articles.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/pages/articles.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="gatsby-config.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../gatsby-config.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -127,16 +136,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="99">
               <caret line="3" column="36" lean-forward="false" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="history.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/components/history.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -179,8 +178,9 @@
         <option value="$PROJECT_DIR$/../src/components/history.js" />
         <option value="$PROJECT_DIR$/../src/layouts/index.js" />
         <option value="$PROJECT_DIR$/../gatsby-node.js" />
-        <option value="$PROJECT_DIR$/../src/components/Auth/index.js" />
         <option value="$PROJECT_DIR$/../src/pages/create-profile.js" />
+        <option value="$PROJECT_DIR$/../src/pages/articles.js" />
+        <option value="$PROJECT_DIR$/../src/components/Auth/index.js" />
       </list>
     </option>
   </component>
@@ -384,12 +384,12 @@
       <workItem from="1526295262440" duration="616000" />
       <workItem from="1526343502064" duration="5000" />
       <workItem from="1526381987292" duration="4332000" />
-      <workItem from="1526998052651" duration="2817000" />
+      <workItem from="1526998052651" duration="4288000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15860000" />
+    <option name="totallyTimeSpent" value="17331000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="3862" height="2122" extended-state="6" />
@@ -694,16 +694,6 @@
     <entry file="file://$PROJECT_DIR$/../src/reducers/authReducer.js" />
     <entry file="file://$PROJECT_DIR$/../src/reducers/index.js" />
     <entry file="file://$PROJECT_DIR$/../src/store.js" />
-    <entry file="file://$PROJECT_DIR$/../src/pages/articles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#25#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../src/pages/404.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -736,16 +726,6 @@
         <state relative-caret-position="66">
           <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/pages/callback.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -801,19 +781,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../src/components/Auth/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="94" column="9" lean-forward="false" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../src/pages/create-profile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
+        <state relative-caret-position="726">
           <caret line="49" column="21" lean-forward="false" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
@@ -833,6 +803,34 @@
             <marker date="1527000875953" expanded="true" signature="4173:4682" ph="..." />
             <marker date="1527000875953" expanded="true" signature="4205:4565" ph="..." />
             <marker date="1527000875953" expanded="true" signature="4764:4825" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/pages/articles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/pages/callback.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/components/Auth/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="46" column="50" lean-forward="false" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
