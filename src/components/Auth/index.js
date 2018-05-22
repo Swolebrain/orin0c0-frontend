@@ -7,7 +7,8 @@ class Auth {
     domain: AUTH_CONFIG.domain,
     clientID: AUTH_CONFIG.clientId,
     redirectUri: AUTH_CONFIG.callbackUrl,
-    audience: `https://${AUTH_CONFIG.domain}/userinfo`,
+    // audience: `https://${AUTH_CONFIG.domain}/userinfo`,
+    audience: `https://${AUTH_CONFIG.audience}`,
     responseType: 'token id_token',
     scope: 'openid email profile',
   })
@@ -17,8 +18,7 @@ class Auth {
     this.logout = this.logout.bind(this)
     this.handleAuthentication = this.handleAuthentication.bind(this)
     this.isAuthenticated = this.isAuthenticated.bind(this)
-
-    // this.getProfile = this.getProfile.bind(this)
+    this.getUser = this.getUser.bind(this)
   }
 
   login() {
@@ -28,7 +28,7 @@ class Auth {
   handleAuthentication() {
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
-        // console.log(authResult)
+        console.log(authResult)
         this.setSession(authResult)
         return
       }
@@ -46,10 +46,7 @@ class Auth {
     localStorage.setItem('access_token', authResult.accessToken)
     localStorage.setItem('id_token', authResult.idToken)
     localStorage.setItem('expires_at', expiresAt)
-
-    this.auth0.client.userInfo(authResult.accessToken, (err, user) => {
-      localStorage.setItem('user', JSON.stringify(user))
-    })
+    localStorage.setItem('user', JSON.stringify(authResult.idTokenPayload))
 
     navigateTo('/dashboard')
   }
@@ -71,10 +68,9 @@ class Auth {
   }
 
   getUser() {
-    if (localStorage.getItem('user')) {
-      return JSON.parse(localStorage.getItem('user'))
-      // console.log(user)
-    }
+    let user = JSON.parse(localStorage.getItem('user'))
+    return user
+    // console.log(user)
   }
 }
 
