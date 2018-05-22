@@ -5,7 +5,8 @@
  */
 
 // You can delete this file if you're not using it
-const path = require('path')
+const path = require('path');
+const webpack = require('webpack');
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
@@ -41,3 +42,14 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     }
   })
 }
+
+exports.modifyWebpackConfig = ({ config, stage }) => {
+    if (stage === "build-html") {
+        // config.loader("null", {
+        //     test: /auth0-js/,
+        //     loader: "null-loader",
+        // });
+        config.plugin('define', webpack.DefinePlugin, [ { "global.GENTLY": false } ]);
+    }
+    return config;
+};
