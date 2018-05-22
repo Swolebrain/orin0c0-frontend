@@ -66,18 +66,18 @@ class Profile extends Component {
             <div className="col-2">
               <img src={profile.photoUrl} alt={profile.lastName} />
             </div>
-            <div className="col-4">
+            <div className="col-3">
               <h3 className="text-uppercase mb-2">{profile.firstName}</h3>
               <h1 className="text-uppercase">{profile.lastName}</h1>
             </div>
-            <div className="col-4 text-right font-weight-bold">
+            <div className="col-4 text-right font-weight-bold profile-info">
               <p>Name</p>
               <p>Username</p>
               <p>Followed Users</p>
               <p>Pinned Listings</p>
               <p>Favorite Cyrptocurrencies</p>
             </div>
-            <div className="col-4">
+            <div className="col-4 profile-info">
               <p>
                 {profile.firstName} {profile.lastName}
               </p>
