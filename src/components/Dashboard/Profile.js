@@ -58,11 +58,41 @@ class Profile extends Component {
           </Link>
         </div>
       )
+    } else if (profile) {
+      profileContent = (
+        <div>
+          <h1>Dashboard</h1>
+          <div className="d-flex">
+            <div className="col-2">
+              <img src={profile.photoUrl} alt={profile.lastName} />
+            </div>
+            <div className="col-4">
+              <h3 className="text-uppercase mb-2">{profile.firstName}</h3>
+              <h1 className="text-uppercase">{profile.lastName}</h1>
+            </div>
+            <div className="col-4 text-right font-weight-bold">
+              <p>Name</p>
+              <p>Username</p>
+              <p>Followed Users</p>
+              <p>Pinned Listings</p>
+              <p>Favorite Cyrptocurrencies</p>
+            </div>
+            <div className="col-4">
+              <p>
+                {profile.firstName} {profile.lastName}
+              </p>
+              <p>{profile.username}</p>
+              <p>{profile.followedUsers.length}</p>
+              <p>{profile.pinnedListings.length}</p>
+            </div>
+          </div>
+        </div>
+      )
     }
 
     return (
       <div className="container">
-        <div className="row">{profileContent}</div>
+        <div className="">{profileContent}</div>
       </div>
     )
   }
