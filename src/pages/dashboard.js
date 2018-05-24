@@ -18,7 +18,7 @@ class DashboardPage extends Component {
 		const user = auth.getUser();
 		const userEmail = user.email;
 
-		const getUserProfile = await axios.get(
+		const {data: userProfile} = await axios.get(
 			`http://localhost:5000/api/users/${userEmail}`,
 			{
 				headers: {
@@ -26,24 +26,42 @@ class DashboardPage extends Component {
 				},
 			}
 		);
-
-		const getUserListings = await axios
+		console.log('USER PROFILE', userProfile)
+		const {data: userListings} = await axios
 			.get(
-				`http://localhost:5000/api/listings/user/${
-					getUserProfile.data._id
-				}`,
+				`http://localhost:5000/api/listings/user/${userProfile._id}`,
 				{
 					headers: {
 						Authorization: `Bearer ${token}`,
 					},
 				}
-			)
-			.then(res => {
-				console.log(res.data);
-			})
-			.catch(err => console.log(err));
+			);
 
-		console.log(getUserProfile.data);
+		console.log(userListings);
+
+        // axios.get(
+         //    `http://localhost:5000/api/users/${userEmail}`,
+         //    {
+         //        headers: {
+         //            Authorization: `Bearer ${token}`,
+         //        },
+         //    }
+        // ).then(userProfile => {
+        	// this.setState({})
+        	// return axios
+         //        .get(
+         //            `http://localhost:5000/api/listings/user/${userProfile._id}`,
+         //            {
+         //                headers: {
+         //                    Authorization: `Bearer ${token}`,
+         //                },
+         //            }
+         //        );
+		// })
+		// .then(listings => {
+        //
+        //
+		// });
 	}
 
 	render() {

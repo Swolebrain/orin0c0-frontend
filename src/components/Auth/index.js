@@ -88,25 +88,11 @@ class Auth {
     }
     getAccessToken() {
         if (typeof window === 'undefined') return;
-        let access_token = localStorage.getItem('access_token');
-        try{
-            access_token = JSON.parse(access_token);
-        }
-        catch (err) {
-            console.log(err);
-        }
-        return access_token;
+        return localStorage.getItem('access_token');
     }
     getIdToken() {
         if (typeof window === 'undefined') return;
-        let id_token = localStorage.getItem('id_token');
-        try{
-            id_token = JSON.parse(id_token);
-        }
-        catch (err) {
-            console.log(err);
-        }
-        return id_token;
+        return localStorage.getItem('id_token');
     }
 }
 
