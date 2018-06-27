@@ -5,7 +5,7 @@ import Link from 'gatsby-link';
 const PostLinkTile = ({node}) => {
     return (
         <li>
-            <Link to={`/articles/git ${node.slug}`}>{node.title}</Link>
+            <Link to={`/articles/${node.slug}`}>{node.title}</Link>
         </li>
     );
 };

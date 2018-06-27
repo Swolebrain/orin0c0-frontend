@@ -9,8 +9,9 @@ class Auth {
         clientID: AUTH_CONFIG.clientId,
         redirectUri: AUTH_CONFIG.callbackUrl,
         // audience: `https://${AUTH_CONFIG.domain}/userinfo`,
-        audience: `https://${AUTH_CONFIG.audience}`,
+        audience: `https://${AUTH_CONFIG.domain}/userinfo`,
         responseType: 'token id_token',
+
         scope: 'openid email profile',
     })
 
@@ -28,14 +29,14 @@ class Auth {
 
     handleAuthentication() {
         this.auth0.parseHash((err, authResult) => {
-            if (authResult && authResult.accessToken && authResult.idToken) {
-                console.log(authResult)
-                this.setSession(authResult)
-                return
+            if (!authResult || !authResult.accessToken || !authResult.idToken){
+                console.log(err)
+                alert(`Error: ${err.error}. Check the console for further details.`)
+
             }
-            navigateTo('/dashboard')
-            console.log(err)
-            alert(`Error: ${err.error}. Check the console for further details.`)
+            console.log(authResult);
+            this.setSession(authResult);
+            navigateTo('/dashboard');
         })
     }
 
